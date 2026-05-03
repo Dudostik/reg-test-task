@@ -12,7 +12,7 @@
 ### Запуск
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/reg-test-task.git
+git clone https://github.com/Dudostik/reg-test-task.git
 cd reg-test-task
 npm install
 npm run dev
