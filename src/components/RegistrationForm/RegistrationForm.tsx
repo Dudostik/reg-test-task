@@ -29,7 +29,6 @@ const RegistrationForm = () => {
 
   const onSubmit = async (data: RegistrationFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    // eslint-disable-next-line react-hooks/purity
     const hasError = Math.random() < 0.3;
 
     if (hasError) {
@@ -51,7 +50,6 @@ const RegistrationForm = () => {
 
   return (
     <>
-      {/* Фон страницы */}
       <div
         className="min-h-screen flex items-center justify-center p-4"
         style={{ background: "#131C2D" }}
@@ -95,10 +93,8 @@ const RegistrationForm = () => {
           style={{ background: "#112340" }}
         >
           <div className="flex flex-col gap-12">
-            {/* Применяем класс form-grid к контейнеру с полями */}
             <div className="form-grid flex flex-col gap-6">
               <div className="flex flex-col gap-6">
-                {/* Поле ФИО */}
                 <div className="flex flex-col gap-2">
                   <label className="text-base text-white leading-6 h-6 font-montserrat">
                     ФИО *
@@ -119,7 +115,6 @@ const RegistrationForm = () => {
                   )}
                 </div>
 
-                {/* Поле Телефон */}
                 <div className="flex flex-col gap-2">
                   <label className="text-base text-white leading-6 h-6 font-montserrat">
                     Телефон *
@@ -143,7 +138,6 @@ const RegistrationForm = () => {
               </div>
 
               <div className="flex flex-col gap-6">
-                {/* Поле Компания */}
                 <div className="flex flex-col gap-2">
                   <label className="text-base text-white leading-6 h-6 font-montserrat">
                     Компания *
@@ -164,7 +158,6 @@ const RegistrationForm = () => {
                   )}
                 </div>
 
-                {/* Поле Должность */}
                 <div className="flex flex-col gap-2">
                   <label className="text-base text-white leading-6 h-6 font-montserrat">
                     Должность *
@@ -187,7 +180,6 @@ const RegistrationForm = () => {
               </div>
             </div>
 
-            {/* Email с классом form-full-width */}
             <div className="form-full-width flex flex-col gap-2">
               <label className="text-base text-white leading-6 h-6 font-montserrat">
                 Email *
@@ -213,7 +205,6 @@ const RegistrationForm = () => {
               )}
             </div>
 
-            {/* Textarea с классом form-full-width */}
             <div className="form-full-width flex flex-col gap-2">
               <label className="text-base text-white leading-6 h-6 font-montserrat">
                 Ваши вопросы к обсуждению
@@ -228,7 +219,6 @@ const RegistrationForm = () => {
               </div>
             </div>
 
-            {/* Счетчик лекций */}
             <div className="text-center py-2">
               <p className="text-base text-white font-montserrat">
                 Выбрано{" "}
@@ -239,7 +229,6 @@ const RegistrationForm = () => {
               </p>
             </div>
 
-            {/* Кнопка и политика с классом form-full-width */}
             <div className="form-full-width flex flex-col gap-2 items-center">
               <button
                 onClick={handleSubmit(onSubmit)}

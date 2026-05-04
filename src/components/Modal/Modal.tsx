@@ -23,20 +23,16 @@ const Modal = ({ isOpen, onClose, type, message }: ModalProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Оверлей с затемнением */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-all"
         onClick={onClose}
       />
 
-      {/* Модальное окно - в стиле формы */}
       <div
         className="relative w-full max-w-md rounded-lg border border-[#75C9EA] shadow-2xl animate-in fade-in zoom-in duration-300"
         style={{ background: "#112340" }}
       >
-        {/* Контент */}
         <div className="p-8 flex flex-col items-center gap-6">
-          {/* Иконка */}
           <div className="flex justify-center">
             {type === "success" ? (
               <div
@@ -80,7 +76,6 @@ const Modal = ({ isOpen, onClose, type, message }: ModalProps) => {
             )}
           </div>
 
-          {/* Заголовок */}
           <h2
             className="text-2xl font-bold text-center font-montserrat"
             style={{ color: "#FFFFFF" }}
@@ -88,7 +83,6 @@ const Modal = ({ isOpen, onClose, type, message }: ModalProps) => {
             {type === "success" ? "Успешно!" : "Ошибка"}
           </h2>
 
-          {/* Сообщение */}
           <p
             className="text-center text-base leading-6 font-montserrat"
             style={{ color: "#FFFFFF", opacity: 0.8 }}
@@ -96,7 +90,6 @@ const Modal = ({ isOpen, onClose, type, message }: ModalProps) => {
             {message}
           </p>
 
-          {/* Кнопка закрытия */}
           <button
             onClick={onClose}
             className="w-full max-w-[200px] py-3 px-6 rounded-lg transition-all duration-200 hover:-translate-y-px hover:shadow-lg font-montserrat font-medium"
