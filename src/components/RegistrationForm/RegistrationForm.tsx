@@ -29,6 +29,8 @@ const RegistrationForm = () => {
 
   const onSubmit = async (data: RegistrationFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    // eslint-disable-next-line react-hooks/purity
     const hasError = Math.random() < 0.3;
 
     if (hasError) {
